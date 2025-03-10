@@ -12,11 +12,11 @@
         
         <!-- Campo para digitar peso -->
         <label for="peso">Digite o seu peso (kg):</label>
-        <input type="number" id="peso" placeholder="Peso em kg" required>
+        <input type="text" id="peso" placeholder="Peso em kg" required> <!-- Alterado para "text" -->
 
         <!-- Campo para digitar altura -->
-        <label for="altura">Digite a sua altura (m):</label>
-        <input type="number" id="altura" step="0.01" placeholder="Altura em metros" required>
+        <label for="altura">Digite a sua altura(m) ex1,20:</label>
+        <input type="text" id="altura" step="0.01" placeholder="Altura em metros" required> <!-- Alterado para "text" -->
 
         <!-- Botão para calcular o IMC -->
         <button onclick="calcularIMC()">Calcular IMC</button>
@@ -31,4 +31,3 @@
     <script src="logica.js"></script>
 </body>
 </html>
-
