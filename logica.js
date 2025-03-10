@@ -1,10 +1,10 @@
 function calcularIMC() {
     // Obter os valores de peso e altura dos inputs
-    let peso = document.getElementById('peso').value;
-    let altura = document.getElementById('altura').value;
+    let peso = parseFloat(document.getElementById('peso').value);
+    let altura = parseFloat(document.getElementById('altura').value);
 
     // Verificar se os valores são válidos
-    if (peso && altura && peso > 0 && altura > 0) {
+    if (peso > 0 && altura > 0) {
         // Calcular o IMC
         let imc = peso / (altura * altura);
 
@@ -22,8 +22,11 @@ function calcularIMC() {
         } else {
             categoria = "Obesidade";
         }
+
+        // Exibir a categoria
         document.getElementById('categoria').textContent = `Categoria: ${categoria}`;
     } else {
+        // Alerta se os valores inseridos forem inválidos
         alert("Por favor, insira valores válidos para peso e altura.");
     }
 }
